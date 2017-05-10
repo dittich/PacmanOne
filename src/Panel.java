@@ -21,4 +21,8 @@ public class Panel extends JPanel{
 		p.draw(g2);
 	}
 	
+	public void update(){
+		p.update();
+	}
+	
 }

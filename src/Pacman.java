@@ -6,6 +6,7 @@ public class Pacman {
 
 	float x;
 	float y;
+	float speed = 1f;
 	
 	public Pacman(int x, int y){
 		this.x = x;
@@ -20,13 +21,13 @@ public class Pacman {
 	
 	public void update(){
 		if(Listener.keyCode == KeyEvent.VK_D)
-			x += 0.2f;
+			x += speed;
 		if(Listener.keyCode == KeyEvent.VK_A)
-			x -= 0.2f;
+			x -= speed;
 		if(Listener.keyCode == KeyEvent.VK_W)
-			y -= 0.2f;
+			y -= speed;
 		if(Listener.keyCode == KeyEvent.VK_S)
-			y += 0.2f;
+			y += speed;
 	}
 	
 }
