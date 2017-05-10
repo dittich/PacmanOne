@@ -10,7 +10,6 @@ public class Game implements Runnable{
 		gestoppt = false;
 		
 		b = new Board();
-		this.run();
 	}
 	
 	@Override

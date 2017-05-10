@@ -6,7 +6,7 @@ public class Pacman {
 
 	float x;
 	float y;
-	float speed = 1f;
+	float speed = 0.2f;
 	
 	public Pacman(int x, int y){
 		this.x = x;

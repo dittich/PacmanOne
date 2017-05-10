@@ -19,6 +19,7 @@ public class Panel extends JPanel{
 		Graphics2D g2 = (Graphics2D) g;
 		super.paintComponent(g2);
 		p.draw(g2);
+		update();
 	}
 	
 	public void update(){
