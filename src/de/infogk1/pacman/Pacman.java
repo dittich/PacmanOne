@@ -7,7 +7,7 @@ public class Pacman {
 
 	float x;
 	float y;
-	float speed = 0.2f;
+	int speed = 500;
 	
 	public Pacman(int x, int y){
 		this.x = x;
@@ -20,15 +20,15 @@ public class Pacman {
 		g.fillOval((int)x, (int)y, 50, 50);
 	}
 	
-	public void update(){
+	public void update(float tslf){
 		if(Listener.keys.get("right").isLastKey())
-			x += speed;
+			x += speed*tslf;
 		if(Listener.keys.get("left").isLastKey())
-			x -= speed;
+			x -= speed*tslf;
 		if(Listener.keys.get("up").isLastKey())
-			y -= speed;
+			y -= speed*tslf;
 		if(Listener.keys.get("down").isLastKey())
-			y += speed;
+			y += speed*tslf;
 	}
 	
 }

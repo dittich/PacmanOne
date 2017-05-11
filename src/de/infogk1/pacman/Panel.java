@@ -22,8 +22,12 @@ public class Panel extends JPanel{
 		update();
 	}
 	
+	long lastFrame = System.currentTimeMillis();
 	public void update(){
-		p.update();
+		long thisFrame = System.currentTimeMillis();
+		float tslf = (thisFrame-lastFrame)/1000f;
+		lastFrame = thisFrame;
+		p.update(tslf);
 	}
 	
 }
