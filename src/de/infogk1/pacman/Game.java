@@ -1,7 +1,5 @@
 package de.infogk1.pacman;
 
-import java.awt.event.KeyEvent;
-
 public class Game implements Runnable{
 
 	private Board b;
@@ -16,10 +14,9 @@ public class Game implements Runnable{
 	
 	@Override
 	public void run() {
-		// TODO Auto-generated method stub
 		while(!gestoppt){
 			b.repaint();
-			if(Listener.keyCode == KeyEvent.VK_SPACE){
+			if(Listener.keys.get("space").triggered){
 				gestoppt = true;
 				System.exit(0);
 			}

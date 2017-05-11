@@ -2,7 +2,6 @@ package de.infogk1.pacman;
 
 import java.awt.Color;
 import java.awt.Graphics2D;
-import java.awt.event.KeyEvent;
 
 public class Pacman {
 
@@ -22,13 +21,13 @@ public class Pacman {
 	}
 	
 	public void update(){
-		if(Listener.keyCode == KeyEvent.VK_D)
+		if(Listener.keys.get("right").isLastKey())
 			x += speed;
-		if(Listener.keyCode == KeyEvent.VK_A)
+		if(Listener.keys.get("left").isLastKey())
 			x -= speed;
-		if(Listener.keyCode == KeyEvent.VK_W)
+		if(Listener.keys.get("up").isLastKey())
 			y -= speed;
-		if(Listener.keyCode == KeyEvent.VK_S)
+		if(Listener.keys.get("down").isLastKey())
 			y += speed;
 	}
 	
