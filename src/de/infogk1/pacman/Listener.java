@@ -1,3 +1,5 @@
+package de.infogk1.pacman;
+
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
 

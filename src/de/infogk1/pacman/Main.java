@@ -1,3 +1,5 @@
+package de.infogk1.pacman;
+
 import javax.swing.JFrame;
 
 public class Main {
