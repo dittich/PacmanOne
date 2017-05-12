@@ -5,7 +5,6 @@ import javax.swing.JFrame;
 public class Board extends JFrame{
 	
 	public Board(){
-		//
 		super();
 		this.setSize(600, 400);
 		this.setVisible(true);
