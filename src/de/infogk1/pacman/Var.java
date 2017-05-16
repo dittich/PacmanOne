@@ -5,5 +5,6 @@ import java.awt.image.BufferedImage;
 public class Var {
 
 	static BufferedImage[] iPacman = {};
+	static BufferedImage spriteSheet;
 	
 }

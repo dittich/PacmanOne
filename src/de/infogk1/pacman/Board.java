@@ -1,5 +1,9 @@
 package de.infogk1.pacman;
 
+import java.io.File;
+import java.io.IOException;
+
+import javax.imageio.ImageIO;
 import javax.swing.JFrame;
 
 public class Board extends JFrame{
@@ -11,7 +15,7 @@ public class Board extends JFrame{
 		this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		this.setResizable(false);
 		this.setLocationRelativeTo(null);
-		this.add(new Panel());
+		this.add(new Pacman(50, 50));
 		this.addKeyListener(new Listener());
 	}
 }

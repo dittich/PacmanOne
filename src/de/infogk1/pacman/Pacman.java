@@ -27,12 +27,7 @@ public class Pacman extends JPanel{
 		g.drawString("Das ist Pacman", 40, 40);
 		g.setColor(Color.YELLOW);
 		
-		try {
-			texture = ImageIO.read(new File("res/pacman.jpg"));
-		} catch (IOException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
+		texture = Spriteloader.getSprites(32, 32, 6, 1, 0, 0)[1];
 
 		g.drawImage(texture, null, (int)x, (int)y);
 	}
@@ -51,6 +46,13 @@ public class Pacman extends JPanel{
 	
 	@Override
 	protected void paintComponent(Graphics g) {
+
+
+		try {
+			if(Var.spriteSheet == null)Var.spriteSheet = ImageIO.read(new File("res/pacman_sprites_full_32.png"));
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
 		Graphics2D g2 = (Graphics2D) g;
 		super.paintComponent(g2);
 		this.draw(g2);
