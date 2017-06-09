@@ -24,6 +24,8 @@ public class Menubar {
 		menuDatei.add(itemStart);
 		JMenuItem itemPaused = new JMenuItem("Game pausieren");
 		menuDatei.add(itemPaused);
+		JMenuItem itemContinue = new JMenuItem("Game fortfahren");
+		menuDatei.add(itemContinue);
 		JMenuItem itemEnd = new JMenuItem("Beenden");
 		menuDatei.add(itemEnd);
 		JMenuItem itemProperties = new JMenuItem("Éinstellungen");
@@ -33,8 +35,7 @@ public class Menubar {
 			@Override
 			public void actionPerformed(ActionEvent arg0) {
 				// TODO Auto-generated method stub
-				Var.points = 0;
-				Var.collision = true;
+				Var.resetAll();
 				Var.gameRun = true;
 			}
 		});
@@ -44,6 +45,14 @@ public class Menubar {
 			public void actionPerformed(ActionEvent arg0) {
 				// TODO Auto-generated method stub
 				Var.gameRun = false;
+			}
+		});
+		
+		itemContinue.addActionListener(new ActionListener() {
+			@Override
+			public void actionPerformed(ActionEvent arg0) {
+				// TODO Auto-generated method stub
+				Var.gameRun = true;
 			}
 		});
 		

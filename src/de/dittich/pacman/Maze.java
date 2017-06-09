@@ -21,11 +21,15 @@ public class Maze {
 					if (Integer.parseInt("" + c[j]) == 2) {
 						Var.xPac = j;
 						Var.yPac = i;
+						Var.xPacStart = j;
+						Var.yPacStart = i;
 					}
 					else if(Integer.parseInt("" + c[j]) == 3) {
 						for(int k=0; k<=3; k++){
 							Var.xG[k]=j;
 							Var.yG[k]=i;
+							Var.xGStart[k]=j;
+							Var.yGStart[k]=i;
 						}
 					}
 				}

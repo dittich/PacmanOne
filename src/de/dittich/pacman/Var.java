@@ -21,11 +21,16 @@ public class Var {
 	
 	static BufferedImage mazeImage;
 
+	static int xPacStart = 0;
+	static int yPacStart = 0;
 	static int xPac = 0;
 	static int yPac = 0;
-	static int speedPac = 5;
+	static int speedPac = 35;
 	static int pacmanAnimationsFrame = 0;
 	
+	static int []xGStart = {0,0,0,0};
+	static int []yGStart = {0,0,0,0};
+	static int []dGStart = {0,0,0,0};
 	static int []xG = {0,0,0,0};
 	static int []yG = {0,0,0,0};
 	static int []dG = {0,0,0,0};//Direction Walk 0, 90, 180, 270
@@ -70,6 +75,27 @@ public class Var {
 			};
 
 	static int[][] maze = new int[1000][800];
+	
+	public static void resetAll(){
+		//Zuruecksetzen der Figuren und Punkte,...
+		for(int i=0; i<=3;i++){
+			Var.xG[i] = Var.xGStart[i];
+			Var.yG[i] = Var.yGStart[i];
+			Var.dG[i] = Var.dGStart[i];
+		}
+		Var.speedG = 30;
+		Var.ghostOneAnimationsFrame = 0;
+		
+		Var.xPac = Var.xPacStart;
+		Var.yPac = Var.yPacStart;
+		Var.speedPac = 35;
+		Var.pacmanAnimationsFrame = 0;
+		
+		Var.points = 0;
+		Var.collision = false;
+		
+		
+	}
 	
 	public static void moveUp(){
 		Var.moveDel();

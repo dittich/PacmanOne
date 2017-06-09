@@ -13,7 +13,7 @@ public class PacmanMovement {
 
 			@Override
 			public void run() {
-				if(Var.gameRun){
+				if(Var.gameRun && !Var.collision){
 					if (Var.movenextup && Var.maze[Var.xPac][Var.yPac-Var.step]!=0) {
 						Var.moveUp();
 					} else if (Var.movenextdown && Var.maze[Var.xPac][Var.yPac+Var.step]!=0) {
@@ -41,6 +41,6 @@ public class PacmanMovement {
 				
 			}
 
-		}, 0, 10-Var.speedPac);
+		}, 0, 50-Var.speedPac);
 	}
 }

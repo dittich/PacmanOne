@@ -19,6 +19,7 @@ public class PacmanPlay {
 		new PacmanAnimation();
 		new GhostMovement();
 		new GhostAnimation();
+		new Collision();
 		
 		Timer gamingLoop = new Timer();
 		gamingLoop.scheduleAtFixedRate(new TimerTask() {
@@ -29,10 +30,7 @@ public class PacmanPlay {
 			 */
 			public void run() {
 				// TODO Auto-generated method stub
-				while(Var.gameRun){
-					Var.lbl1.repaint();
-				}
-				
+				Var.lbl1.repaint();
 			}
 		}, 0, 10);
 	}

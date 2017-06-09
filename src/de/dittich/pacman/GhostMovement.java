@@ -14,7 +14,7 @@ public class GhostMovement {
 			@Override
 			public void run() {
 				// TODO Auto-generated method stub
-				if(Var.gameRun){
+				if(Var.gameRun && !Var.collision){
 					for(int i=0; i<=3; i++){
 						kreuzung(i);
 						
