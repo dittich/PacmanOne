@@ -34,7 +34,9 @@ public class Var {
 	
 	static int step = 1;
 	
-	
+	static boolean collision = false;
+	static int points = 0;
+	static boolean gameRun = false;
 
 	static boolean moveup = false;
 	static boolean movedown = false;

@@ -6,27 +6,30 @@ import java.util.TimerTask;
 public class GhostMovement {
 
 	Timer movement;
-	int ghostNr;
 	
-	public GhostMovement(int ghostNr) {
-		this.ghostNr = ghostNr;
+	public GhostMovement() {
 		movement = new Timer();
 		movement.scheduleAtFixedRate(new TimerTask() {
 
 			@Override
 			public void run() {
 				// TODO Auto-generated method stub
-				for(int i=0; i<=3; i++){
-					kreuzung(i);
-					
-					if(Var.dG[i]==0 && Var.yG[i]-1!=0)
-						Var.yG[i] -= 1;
-					else if(Var.dG[i]==90 && Var.xG[i]-1!=0)
-						Var.xG[i] -= 1;
-					else if(Var.dG[i]==180 && Var.yG[i]+1!=0)
-						Var.yG[i] += 1;
-					else if(Var.dG[i]==270 && Var.xG[i]+1!=0)
-						Var.xG[i] += 1;
+				if(Var.gameRun){
+					for(int i=0; i<=3; i++){
+						kreuzung(i);
+						
+						if(Var.dG[i]==0 && Var.yG[i]-1!=0)
+							Var.yG[i] -= 1;
+						else if(Var.dG[i]==90 && Var.xG[i]-1!=0)
+							Var.xG[i] -= 1;
+						else if(Var.dG[i]==180 && Var.yG[i]+1!=0)
+							Var.yG[i] += 1;
+						else if(Var.dG[i]==270 && Var.xG[i]+1!=0)
+							Var.xG[i] += 1;
+					}
+				}
+				else{
+					//Reset
 					
 				}
 			}

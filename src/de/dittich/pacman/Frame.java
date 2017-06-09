@@ -7,7 +7,7 @@ public class Frame {
     private BufferedImage frame;
     private int duration;
 
-    public Frame(BufferedImage frame, int duration) {
+    public Frame(BufferedImage frame, int duration, int w) {
         this.frame = frame;
         this.duration = duration;
     }
