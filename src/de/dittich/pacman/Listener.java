@@ -13,28 +13,28 @@ public class Listener implements KeyListener {
 	public void keyPressed(KeyEvent e) {
 		// TODO Auto-generated method stub
 		if (e.getKeyCode() == KeyEvent.VK_W) {
-			Var.moveup = true;
-			Var.movedown = false;
-			Var.moveleft = false;
-			Var.moveright = false;
+			Var.movenextup = true;
+			Var.movenextdown = false;
+			Var.movenextleft = false;
+			Var.movenextright = false;
 		}
 		if (e.getKeyCode() == KeyEvent.VK_S) {
-			Var.moveup = false;
-			Var.movedown = true;
-			Var.moveleft = false;
-			Var.moveright = false;
+			Var.movenextup = false;
+			Var.movenextdown = true;
+			Var.movenextleft = false;
+			Var.movenextright = false;
 		}
 		if (e.getKeyCode() == KeyEvent.VK_A) {
-			Var.moveup = false;
-			Var.movedown = false;
-			Var.moveleft = true;
-			Var.moveright = false;
+			Var.movenextup = false;
+			Var.movenextdown = false;
+			Var.movenextleft = true;
+			Var.movenextright = false;
 		}
 		if (e.getKeyCode() == KeyEvent.VK_D) {
-			Var.moveup = false;
-			Var.movedown = false;
-			Var.moveleft = false;
-			Var.moveright = true;
+			Var.movenextup = false;
+			Var.movenextdown = false;
+			Var.movenextleft = false;
+			Var.movenextright = true;
 		}
 	}
 

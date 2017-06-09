@@ -1,10 +1,16 @@
 package de.dittich.pacman;
 
+import java.io.File;
+import java.io.IOException;
+
+import javax.imageio.ImageIO;
 import javax.swing.JFrame;
 
 public class Gui {
 
-	public Gui() {
+	public Gui() throws IOException {
+		Var.mazeImage = ImageIO.read(new File(Var.fileMazeImage));
+		
 		Var.jf1 = new JFrame();
 		Var.jf1.setSize(Var.screenwidth, Var.screenheight);
 		Var.jf1.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -19,6 +25,7 @@ public class Gui {
 		Var.lbl1 = new Label();
 		Var.lbl1.setBounds(0, 0, Var.screenwidth, Var.screenheight);
 		Var.lbl1.setVisible(true);
+		
 		Var.jf1.add(Var.lbl1);
 	}
 }

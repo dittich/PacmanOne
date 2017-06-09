@@ -23,8 +23,10 @@ public class Maze {
 						Var.yPac = i;
 					}
 					else if(Integer.parseInt("" + c[j]) == 3) {
-						Var.xG1 = j;
-						Var.yG1 = i;
+						for(int k=0; k<=3; k++){
+							Var.xG[k]=j;
+							Var.yG[k]=i;
+						}
 					}
 				}
 			}

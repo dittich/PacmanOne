@@ -72,13 +72,6 @@ public class GhostMovement {
 		else if(ways>=3){
 			Var.dG[ghostID]=moreWayDirection(ghostID, ways);
 		}
-		//System.out.println(ways+" - "+Var.dG[ghostID]);
-		/*
-		if(ways<=2)
-			return false;
-		else
-			return true;
-			*/
 	}
 	
 	public static int moreWayDirection(int i, int ways){
